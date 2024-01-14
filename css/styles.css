@@ -24,13 +24,18 @@ ul, ol{
 }
 
 .visually-hidden {
+position:absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+overflow: hidden;
+}
 
-    white-space: nowrap;
-    clip-path: inset(100%);
-    overflow: hidden;
-    }
-
-.container{
+.container {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
@@ -86,7 +91,7 @@ margin-right: 76px;
 .header-list{
     display: flex;
     gap: 40px;
-   
+   padding: 24px 0;
 
 }
 
@@ -95,7 +100,7 @@ margin-right: 76px;
 }
 
 .header-item{
-    padding: 24px 0;
+    
 }
 
 .header-link{
