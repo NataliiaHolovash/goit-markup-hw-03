@@ -2,45 +2,58 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #434455;
     background: #FFFFFF;
-
-}
-
-p, h1,h2,h3,h4,h5,h6{
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 a {
     text-decoration: none;
-    color: currentColor;
-}
-
-button{
-    cursor: pointer;
-}
-
-address {
-    font-style: normal;
 }
 
 ul {
     list-style: none;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul, ol{
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
 }
-img{
-    display: block;
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    overflow: hidden;
+    }
+
+.container{
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
-
+img {
+    display: block;
+    max-width: 100%;
+}
 
 /**-----------------HEADER----------------*/
 .header{
-    border-bottom: 1px solid  #E7E9FC;
-    background:  #FFF;
-    
+    padding: 24px 0;
 }
 
 .logo-studio {
@@ -51,21 +64,7 @@ font-weight: 700;
 line-height: 1.17; 
 letter-spacing: 0.03em;
 text-transform: uppercase;
-align-items: center;
 margin-right: 76px;
-}
-
-.header-conteiner{
-    display: flex;
-    margin: 0 auto;
-    padding: 0 15px
-    width: 100%;
-}
-
-.header-nav{
-    display: flex;
-    align-items: center;
-    
 }
 
 .logo-web {
@@ -76,14 +75,22 @@ font-weight: 700;
 line-height: 1.17; 
 letter-spacing: 0.03em;
 text-transform: uppercase;
-padding-left: 156px;
+align-items: center;
+}
 
+.header-container{
+    display: flex;
+}
+
+.header-nav{
+    display: flex;
 }
 
 .header-list{
     display: flex;
     gap: 40px;
-    padding: 24px 0;
+    align-items: center;
+
 }
 
 .header-link{
@@ -103,11 +110,13 @@ letter-spacing: 0.02em;
 .address {
 font-style: normal;
 }
+
 .header-address{
     display: flex;
     gap: 40px;
+    align-items: center;
     margin-left: 332px;
-    padding: 24px 0;
+    
 }
 
 .header-address-link{
@@ -130,11 +139,7 @@ letter-spacing: 0.02em;
 /**-----------------HERO----------------*/
 .hero {
     background:  #2E2F42;
-    width: 1440px;
-    height: 600px;  
-    width: 100%;
 }
-
 .hero-title {
 color: #FFF;
 text-align: center;
@@ -142,9 +147,14 @@ font-size: 56px;
 font-weight: 700;
 line-height: 1.07; 
 letter-spacing: 0.02em;
-margin: 0 auto;
-padding-top: 188px;
 max-width: 496px;
+margin-bottom: 48px;
+}
+
+.title-btn{
+    display: flex;
+    padding: 188px 0;
+   
 }
 
 .hero-btn {
@@ -154,14 +164,13 @@ font-size: 16px;
 font-weight: 500;
 line-height: 1.5; 
 letter-spacing: 0.04em;
-background:  #4D5AE5;
+background-color:  #4D5AE5;
 cursor: pointer;
-padding: 16px 32px 16px 32px;
-display: block;
-margin-left:auto;
-margin-right:auto;
-margin-top: 48px;
-margin-bottom: 188px;
+min-width: 169px;
+height: 56px;
+border: none;
+border-radius: 4px;
+align-items: center;
 }
 
 .hero-btn:hover,
@@ -174,28 +183,17 @@ margin-bottom: 188px;
 /**-----------------ADVANTAGES----------------*/
 .advantages {
     background: #FFFFFF;
-    width: 1440px;
-     margin-top: 120px;
-    margin-bottom: 120px;
+   
 }
-
-.visually-hidden{
-    display: none;
-}
-
 .adv-title {
 }
 .adv-list {
     display: flex;
-    gap: 24;
-    padding-left: 156px;
-    
+    gap: 24px;
 }
 .adv-item {
-  width: calc((100% - 24px*3) / 4);
-   
+    width: calc((100% - 3 * 24px) / 4);
 }
-
 .adv-subtitle {
 color:  #2E2F42;
 font-size: 20px;
@@ -211,7 +209,6 @@ font-size: 16px;
 font-weight: 400;
 line-height: 1.5; 
 letter-spacing: 0.02em;
-
 }
 
 /**---------------------------------*/
@@ -220,12 +217,7 @@ letter-spacing: 0.02em;
 
 .team {
     background:  #F4F4FD;
-    width: 1440px;
-    height: 732px;
-    width: 100%;
 }
-
-
 .team-title {
 color:  #2E2F42;
 text-align: center;
@@ -235,21 +227,26 @@ line-height: 1.11;
 letter-spacing: 0.02em;
 text-transform: capitalize;
 margin-bottom: 72px;
-padding-top: 120px;
 }
 
 .team-list {
     display: flex;
-    margin-top: 72px;
     gap: 24px;
-    padding-left: 156px;
-    width: calc((100% - 24*3) / 4);
-}
-.team-item {
-    background-color: #FFFFFF
     
 }
+
+.team-item {
+    background-color: #FFFFFF ;
+    width: calc((100% - 3 * 24px) /4);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.person {
+padding: 32px 0;
+}
 .team-img {
+
+
 }
 .team-name {
 color:  #2E2F42;
@@ -258,8 +255,8 @@ font-size: 20px;
 font-weight: 500;
 line-height: 1.2; 
 letter-spacing: 0.02em;
+text-align: center;
 margin-bottom: 8px;
-padding-top: 32px;
 }
 
 .team-position {
@@ -269,7 +266,7 @@ font-size: 16px;
 font-weight: 400;
 line-height: 1.5; 
 letter-spacing: 0.02em;
-padding-bottom: 32px;
+text-align: center;
 }
 
 /**---------------------------------*/
@@ -277,8 +274,6 @@ padding-bottom: 32px;
 /**-----------------PORTFOLIO----------------*/
 .portfolio {
     background: #FFFFFF;
-    width: 100%;
-    width: 1440px;
 }
 .portfolio-title {
 color:  #2E2F42;
@@ -288,21 +283,25 @@ font-weight: 700;
 line-height: 1.11; 
 letter-spacing: 0.02em;
 text-transform: capitalize;
-margin-top: 120px;
 margin-bottom: 72px;
 }
 .portfolio-list {
-    
-    padding-left: 156px;
     display: flex;
     flex-wrap: wrap;
-    gap: 24px 48px;
-    width: calc((100% - 23 * 2) / 3)
+    column-gap: 24px;
+    row-gap: 48px;
 }
+
+.app{
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
+
 .portfolio-item {
+    width: calc((100% - 48px) / 3);
 }
 .portfolio-img {
-    margin: 0 auto;
 }
 .portfolio-name {
 color:  #2E2F42;
@@ -318,13 +317,13 @@ font-size: 16px;
 font-weight: 400;
 line-height: 1.5; 
 letter-spacing: 0.02em;
-
 }
 /**---------------------------------*/
 
 /**-----------------FOOTER----------------*/
 .footer {
     background:  #2E2F42;
+    padding: 100px 0;
 }
 .footer-web{
 color:  #4D5AE5;
@@ -334,6 +333,8 @@ font-weight: 700;
 line-height: 1.17; 
 letter-spacing: 0.03em;
 text-transform: uppercase;
+display: inline-block;
+margin-bottom: 16px;
 }
 
 .footer-studio {
@@ -352,4 +353,5 @@ font-size: 16px;
 font-weight: 400;
 line-height: 1.5; 
 letter-spacing: 0.02em;
+max-width: 264px;
 }
