@@ -24,12 +24,7 @@ ul, ol{
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
+
     white-space: nowrap;
     clip-path: inset(100%);
     overflow: hidden;
@@ -53,7 +48,8 @@ img {
 
 /**-----------------HEADER----------------*/
 .header{
-    padding: 24px 0;
+    
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .logo-studio {
@@ -64,7 +60,7 @@ font-weight: 700;
 line-height: 1.17; 
 letter-spacing: 0.03em;
 text-transform: uppercase;
-margin-right: 76px;
+
 }
 
 .logo-web {
@@ -76,6 +72,7 @@ line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 align-items: center;
+margin-right: 76px;
 }
 
 .header-container{
@@ -89,8 +86,16 @@ align-items: center;
 .header-list{
     display: flex;
     gap: 40px;
-    align-items: center;
+   
 
+}
+
+.header-nav{
+     align-items: center;
+}
+
+.header-item{
+    padding: 24px 0;
 }
 
 .header-link{
@@ -116,6 +121,7 @@ font-style: normal;
     gap: 40px;
     align-items: center;
     margin-left: 332px;
+    padding: 24px 0;
     
 }
 
@@ -169,6 +175,7 @@ cursor: pointer;
 min-width: 169px;
 height: 56px;
 border: none;
+display: block;
 border-radius: 4px;
 align-items: center;
 }
