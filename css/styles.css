@@ -32,7 +32,7 @@ border: 0;
 padding: 0;
 white-space: nowrap;
 clip-path: inset(100%);
-clip: rect(0 0 0 0)
+clip: rect(0 0 0 0);
 overflow: hidden;
 }
 
@@ -87,7 +87,7 @@ margin-right: 76px;
 
 .header-nav{
     display: flex;
-    padding: 24px 0;
+    
 }
 
 .header-list{
@@ -111,6 +111,7 @@ font-size: 16px;
 font-weight: 500;
 line-height: 1.5; 
 letter-spacing: 0.02em;
+padding: 24px 0;
 }
 
 .header-link:hover,
